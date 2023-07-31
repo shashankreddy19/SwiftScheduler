@@ -41,7 +41,7 @@ const Container = styled.div`
     @media (max-width: 425px){
         padding: 30px;
     }
-    
+  
   & .form-main
   {
     width: 35vw; 
@@ -131,7 +131,7 @@ const Extra = styled.div`
   }
 `
 const Ep = styled.div`
-      font-family: 'Fira Sans Extra Condensed', sans-serif;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
     font-size: 14px;
     color: aliceblue;
      @media (max-width: 425px){

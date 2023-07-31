@@ -15,8 +15,9 @@ const Layout = ({ children }) => {
     message.success("Logout Successfully");
     navigate("/login");
   };
-
+  
   // =========== doctor menu ===============
+  
   const doctorMenu = [
     {
       name: "Home",
@@ -42,14 +43,14 @@ const Layout = ({ children }) => {
     ? adminMenu
     : user?.isDoctor
     ? doctorMenu
-    : userMenu;
+      : userMenu;
   return (
     <>
       <div className="main">
         <div className="layout">
           <div className="sidebar">
             <div className="logo">
-              <img src={logo} style={{ position: "relative", top: "50%", left: "50%" }}></img>
+              <h3>Swift-Scheduler</h3>
               <hr />
             </div>
             <div className="menu">
@@ -59,14 +60,14 @@ const Layout = ({ children }) => {
                   <>
                     <div className={`menu-item ${isActive && "active"}`}>
                       <i className={menu.icon}></i>
-                      <Link to={menu.path}>{menu.name}</Link>
+                      <Link style={{fontFamily: "'Comfortaa', cursive"}} to={menu.path}>{menu.name}</Link>
                     </div>
                   </>
                 );
               })}
               <div className={`menu-item `} onClick={handleLogout}>
                 <i className="fa-solid fa-right-from-bracket"></i>
-                <Link to="/login">Logout</Link>
+                <Link style={{fontFamily: "'Comfortaa', cursive"}} to="/login">Logout</Link>
               </div>
             </div>
           </div>
@@ -82,7 +83,7 @@ const Layout = ({ children }) => {
                   <i class="fa-solid fa-bell"></i>
                 </Badge>
 
-                <Link to="/profile">{user?.name}</Link>
+                <Link style={{fontFamily: "'Comfortaa', cursive"}} to="/profile">{user?.name}</Link>
               </div>
             </div>
             <div className="body" >{children}</div>

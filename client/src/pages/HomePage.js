@@ -35,7 +35,7 @@ const HomePage = () => {
   }, []);
   return (
     <Layout >
-        <Row >
+      <Row style={{opacity:"0.8"} }>
         {doctors && doctors.map((doctor) => <DoctorList doctor={doctor} />)}
         </Row>
     </Layout>

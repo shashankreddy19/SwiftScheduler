@@ -1,13 +1,13 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-
+import "../styles/DoctorList.css"
 const DoctorList = ({ doctor }) => {
   const navigate = useNavigate();
   return (
-    <>
+    <div className="cardmain">
       <div
         className="card m-2"
-        style={{ cursor: "pointer" }}
+        style={{ cursor: "pointer" ,border:"none"}}
         onClick={() => navigate(`/doctor/book-appointment/${doctor._id}`)}
       >
         <div className="card-header">
@@ -28,7 +28,7 @@ const DoctorList = ({ doctor }) => {
           </p>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
