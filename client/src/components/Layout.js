@@ -4,6 +4,7 @@ import { adminMenu, userMenu } from "./../Data/data";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { Badge, message } from "antd";
+import logo from "../Images/Saolon-Black.png"
 const Layout = ({ children }) => {
   const { user } = useSelector((state) => state.user);
   const location = useLocation();
@@ -48,7 +49,7 @@ const Layout = ({ children }) => {
         <div className="layout">
           <div className="sidebar">
             <div className="logo">
-              
+              <img src={logo} style={{ position: "relative", top: "50%", left: "50%" }}></img>
               <hr />
             </div>
             <div className="menu">
@@ -84,7 +85,7 @@ const Layout = ({ children }) => {
                 <Link to="/profile">{user?.name}</Link>
               </div>
             </div>
-            <div className="body">{children}</div>
+            <div className="body" >{children}</div>
           </div>
         </div>
       </div>

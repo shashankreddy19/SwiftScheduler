@@ -17,6 +17,7 @@
 }
 
 .content {
+
   width: 100%;
   height: 100%;
 }
@@ -31,7 +32,14 @@
   height: 85vh;
   margin-bottom: 20px;
   box-shadow: 0 0 2px gray;
-  background-color: white;
+  background-image: url("../Images/hero.svg");
+    background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+}
+.logo
+{
+  position: relative;
 }
 .logo h6 {
   font-size: 1.5rem;
@@ -75,9 +83,10 @@
   font-size: 1.2rem;
 }
 .header-content a {
+  align-items: center;
   text-decoration: none;
   font-size: 1.2rem;
-  color: blue;
+  color: rgb(0, 0, 0);
   margin: 0 10px;
   text-transform: uppercase;
 }

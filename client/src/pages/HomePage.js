@@ -3,7 +3,7 @@ import axios from "axios";
 import Layout from "./../components/Layout";
 import { Row } from "antd";
 import styled from 'styled-components'
-import hero from '../Images/hero.jpg'
+import hero from '../Images/hero.svg'
 import DoctorList from "../components/DoctorList";
 const Image = styled.img`
 width: 100%;
@@ -34,11 +34,10 @@ const HomePage = () => {
     getUserData();
   }, []);
   return (
-    <Layout>
-      <Image src={hero}></Image>
-      <Row>
+    <Layout >
+        <Row >
         {doctors && doctors.map((doctor) => <DoctorList doctor={doctor} />)}
-      </Row>
+        </Row>
     </Layout>
   );
 };
