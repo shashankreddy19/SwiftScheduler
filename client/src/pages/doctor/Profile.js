@@ -44,7 +44,7 @@ const Profile = () => {
     } catch (error) {
       dispatch(hideLoading());
       console.log(error);
-      message.error("Somthing Went Wrrong ");
+      message.error("Something Went Wrong ");
     }
   };
   // update doc ==========
@@ -75,7 +75,7 @@ const Profile = () => {
   }, []);
   return (
     <Layout>
-      <h1>Manage Profile</h1>
+      <h1 style={{fontFamily:"'Dancing Script', cursive"}}>Manage Profile</h1>
       {doctor && (
         <Form
           layout="vertical"
@@ -89,61 +89,61 @@ const Profile = () => {
             ],
           }}
         >
-          <h4 className="">Personal Details : </h4>
+          <h4 style={{ fontFamily: "'Comfortaa', cursive" }}  className="">Personal Details : </h4>
           <Row gutter={20}>
             <Col xs={24} md={24} lg={8}>
-              <Form.Item
+              <Form.Item className="formLabel"
                 label="First Name"
                 name="firstName"
                 required
                 rules={[{ required: true }]}
               >
-                <Input type="text" placeholder="your first name" />
+                <Input className="formInput" type="text" placeholder="your first name" />
               </Form.Item>
             </Col>
             <Col xs={24} md={24} lg={8}>
-              <Form.Item
+              <Form.Item className="formLabel"
                 label="Last Name"
                 name="lastName"
                 required
                 rules={[{ required: true }]}
               >
-                <Input type="text" placeholder="your last name" />
+                <Input className="formInput" type="text" placeholder="your last name" />
               </Form.Item>
             </Col>
             <Col xs={24} md={24} lg={8}>
-              <Form.Item
+              <Form.Item className="formLabel"
                 label="Phone No"
                 name="phone"
                 required
                 rules={[{ required: true }]}
               >
-                <Input type="text" placeholder="your contact no" />
+                <Input className="formInput" type="text" placeholder="your contact no" />
               </Form.Item>
             </Col>
             <Col xs={24} md={24} lg={8}>
-              <Form.Item
+              <Form.Item className="formLabel"
                 label="Email"
                 name="email"
                 required
                 rules={[{ required: true }]}
               >
-                <Input type="email" placeholder="your email address" />
+                <Input className="formInput" type="email" placeholder="your email address" />
               </Form.Item>
             </Col>
             <Col xs={24} md={24} lg={8}>
-              <Form.Item label="Website" name="website">
-                <Input type="text" placeholder="your website" />
+              <Form.Item className="formLabel" label="Website" name="website">
+                <Input className="formInput" type="text" placeholder="your website" />
               </Form.Item>
             </Col>
             <Col xs={24} md={24} lg={8}>
-              <Form.Item
+              <Form.Item className="formLabel"
                 label="Address"
                 name="address"
                 required
                 rules={[{ required: true }]}
               >
-                <Input type="text" placeholder="your clinic address" />
+                <Input className="formInput" type="text" placeholder="your clinic address" />
               </Form.Item>
             </Col>
           </Row>
@@ -151,36 +151,39 @@ const Profile = () => {
           <Row gutter={20}>
             <Col xs={24} md={24} lg={8}>
               <Form.Item
+                className="formLabel"
                 label="Specialization"
                 name="specialization"
                 required
                 rules={[{ required: true }]}
               >
-                <Input type="text" placeholder="your specialization" />
+                <Input className="formInput" type="text" placeholder="your specialization" />
               </Form.Item>
             </Col>
             <Col xs={24} md={24} lg={8}>
               <Form.Item
+                className="formLabel"
                 label="Experience"
                 name="experience"
                 required
                 rules={[{ required: true }]}
               >
-                <Input type="text" placeholder="your experience" />
+                <Input className="formInput" type="text" placeholder="your experience" />
               </Form.Item>
             </Col>
             <Col xs={24} md={24} lg={8}>
               <Form.Item
-                label="Fees Per Cunsaltation"
+                className="formLabel"
+                label="Fees Per Consultation"
                 name="feesPerCunsaltation"
                 required
                 rules={[{ required: true }]}
               >
-                <Input type="text" placeholder="your contact no" />
+                <Input className="formInput" type="text" placeholder="your contact no" />
               </Form.Item>
             </Col>
             <Col xs={24} md={24} lg={8}>
-              <Form.Item label="Timings" name="timings" required>
+              <Form.Item className="formLabel" label="Timings" name="timings" required>
                 <TimePicker.RangePicker format="HH:mm" />
               </Form.Item>
             </Col>

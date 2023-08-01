@@ -111,7 +111,7 @@ const Register = () => {
 <Container>
             <Form layout="vertical"
     onFinish={onfinishHandler} className="form-main">
-                <Form.Item className="formLabel" label="Name" name="name"><Input className="formInput" type="text" placeholder="Enter your email" required></Input></Form.Item>
+                <Form.Item className="formLabel" label="Name" name="name"><Input className="formInput" type="text" placeholder="Enter your name" required></Input></Form.Item>
                 <Form.Item className="formLabel" label="Username/Email" name="email"><Input className="formInput" type="email" placeholder="Enter your email" required></Input></Form.Item>
                 <br></br>
           <Form.Item className="formLabel" label="Password" name="password"><Input className="formInput" type="password" name="password" placeholder="Enter your password" required></Input></Form.Item>

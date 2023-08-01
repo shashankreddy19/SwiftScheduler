@@ -4,7 +4,6 @@ import { adminMenu, userMenu } from "./../Data/data";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { Badge, message } from "antd";
-import logo from "../Images/Saolon-Black.png"
 const Layout = ({ children }) => {
   const { user } = useSelector((state) => state.user);
   const location = useLocation();
@@ -60,14 +59,14 @@ const Layout = ({ children }) => {
                   <>
                     <div className={`menu-item ${isActive && "active"}`}>
                       <i className={menu.icon}></i>
-                      <Link style={{fontFamily: "'Comfortaa', cursive"}} to={menu.path}>{menu.name}</Link>
+                      <Link style={{fontFamily: "'Comfortaa', cursive" , fontSize: '16px'}} to={menu.path}>{menu.name}</Link>
                     </div>
                   </>
                 );
               })}
               <div className={`menu-item `} onClick={handleLogout}>
                 <i className="fa-solid fa-right-from-bracket"></i>
-                <Link style={{fontFamily: "'Comfortaa', cursive"}} to="/login">Logout</Link>
+                <Link style={{fontFamily: "'Comfortaa', cursive" , fontSize: '16px'}} to="/login">Logout</Link>
               </div>
             </div>
           </div>
@@ -82,8 +81,8 @@ const Layout = ({ children }) => {
                 >
                   <i class="fa-solid fa-bell"></i>
                 </Badge>
-
-                <Link style={{fontFamily: "'Comfortaa', cursive"}} to="/profile">{user?.name}</Link>
+                {user?.isDoctor && <Link style={{ fontFamily: "'Comfortaa', cursive", fontSize: '20px' }} to="/doctor/profile/${user?._id}">{user?.name}</Link>}
+                {!user?.isDoctor && <Link style={{ fontFamily: "'Comfortaa', cursive", fontSize: '20px' }} to="/">{user?.name}</Link>}
               </div>
             </div>
             <div className="body" >{children}</div>
