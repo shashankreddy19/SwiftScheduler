@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Layout from "./../../components/Layout";
 import axios from "axios";
 import { Table } from "antd";
+import "../../styles/Users.css"
 const Users = () => {
   const [users, setUsers] = useState([]);
 
@@ -53,8 +54,8 @@ const Users = () => {
 
   return (
     <Layout>
-      <h1 className="text-center m-2">Users List</h1>
-      <Table columns={columns} dataSource={users} />
+      <h1 style={{fontFamily:"'Dancing Script', cursive"}} className="text-center m-2">Users List</h1>
+      <Table className="table" columns={columns} dataSource={users} />
     </Layout>
   );
 };
