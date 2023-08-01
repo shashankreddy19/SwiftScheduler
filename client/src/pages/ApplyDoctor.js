@@ -46,7 +46,7 @@ const ApplyDoctor = () => {
   };
   return (
     <Layout>
-      <h1 className="text-center" style={{fontFamily:"'Dancing Script', cursive"}}>Apply Doctor</h1>
+      <h1 className="text-center" style={{fontFamily:"'Dancing Script', cursive"}}>Apply as a Doctor</h1>
       <Form layout="vertical" onFinish={handleFinish} className="m-3">
         <h4 className="" style={{fontFamily: "'Comfortaa', cursive"}}>Personal Details : </h4>
         <Row gutter={20}>

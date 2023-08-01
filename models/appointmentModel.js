@@ -27,10 +27,10 @@ const appointmentSchema = new mongoose.Schema(
       required: true,
       default: "pending",
     },
-    time: {
-      type: String,
-      required: true,
-    },
+    // time: {
+    //   type: String,
+    //   required: true,
+    // },
   },
   { timestamps: true }
 );
