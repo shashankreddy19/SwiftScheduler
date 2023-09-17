@@ -6,25 +6,63 @@ import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { showLoading, hideLoading } from "../redux/features/alertSlice";
 import styled from 'styled-components'
+import login from '../Images/Login.png'
 
 const Container = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 750px;
-  transform: translate(-50%,-50%);
-  padding: 150px 150px 0px 60px;
+  width: 100%;
+  padding: 200px 100px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  ::-webkit-scrollbar{
+    display: none;
+  }
+   @media (max-width: 768px){
+      /* width: 30vw; */
+      display: block;
+      height: 100%;
+      width: 100%;
+      padding: 100px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+    @media (max-width: 425px){
+        padding: 30px;
+    }
+  
   & .form-main
   {
-    width: 100%;
-    position: relative;
+    width: 32vw; 
     border: 2px solid black;
     padding: 30px 30px 0;
+    @media (max-width: 768px){
+      /* width: 50vw; */
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+    @media (max-width: 768px){
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      width: 100%;
+      margin: 0;
+      overflow: hidden;
+      padding: 15px 15px 0;
+      /* font-size: 14px; */
+    }
   }
   & .formLabel
   {
-          font-family: 'Ubuntu';
+    font-family: 'Ubuntu';
     font-weight: 600;
+    @media (max-width: 425px){
+      font-size: 12px;
+    }
   }
   & .formInput
   {
@@ -38,6 +76,18 @@ const Container = styled.div`
     {
       outline: none;
     }
+  }
+`
+
+const Left = styled.div`
+
+`
+
+const Image = styled.img`
+  width: 35vw;
+  height : 52vh;
+  @media (max-width: 768px){
+    display: none;
   }
 `
 
@@ -108,7 +158,10 @@ const Register = () => {
     }
   };
   return (
-<Container>
+    <Container>
+      <Left>
+        <Image src={login}></Image>
+      </Left>
             <Form layout="vertical"
     onFinish={onfinishHandler} className="form-main">
                 <Form.Item className="formLabel" label="Name" name="name"><Input className="formInput" type="text" placeholder="Enter your name" required></Input></Form.Item>

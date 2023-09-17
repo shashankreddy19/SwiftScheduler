@@ -34,7 +34,7 @@ const NotificationPage = () => {
     } catch (error) {
       dispatch(hideLoading());
       console.log(error);
-      message.error("somthing went wrong");
+      message.error("something went wrong");
     }
   };
 
@@ -65,13 +65,13 @@ const NotificationPage = () => {
   };
   return (
     <Layout>
-      <h4 className="p-3 text-center">Notification Page</h4>
+      <h2 className="p-3 text-center" style={{fontFamily:"'Dancing Script', cursive"}}>Notification Page</h2>
       <Tabs>
-        <Tabs.TabPane tab="unRead" key={0}>
+        <Tabs.TabPane tab="unRead" style={{fontFamily: "'Comfortaa', cursive"}} key={0}>
           <div className="d-flex justify-content-end">
-            <h4 className="p-2" onClick={handleMarkAllRead}>
+            <b className="p-2" style={{fontFamily: "'Comfortaa', cursive"}} onClick={handleMarkAllRead}>
               Mark All Read
-            </h4>
+            </b>
           </div>
           {user?.notifcation.map((notificationMgs) => (
             <div className="card" style={{ cursor: "pointer" }}>
@@ -84,11 +84,12 @@ const NotificationPage = () => {
             </div>
           ))}
         </Tabs.TabPane>
-        <Tabs.TabPane tab="Read" key={1}>
+        <Tabs.TabPane style={{fontFamily: "'Comfortaa', cursive"}} tab="Read" key={1}>
           <div className="d-flex justify-content-end">
             <h4
+  
               className="p-2 text-primary"
-              style={{ cursor: "pointer" }}
+              style={{ cursor: "pointer" ,fontFamily: "'Comfortaa', cursive"}}
               onClick={handleDeleteAllRead}
             >
               Delete All Read
