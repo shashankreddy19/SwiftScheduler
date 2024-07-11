@@ -170,7 +170,7 @@ const Register = () => {
           <Form.Item className="formLabel" label="Password" name="password"><Input className="formInput" type="password" name="password" placeholder="Enter your password" required></Input></Form.Item>
                 <br></br>
                 <div>
-                    <Button type="submit">Register ></Button>
+                    <Button type="submit">Register</Button>
         </div>
         <br></br>
             <br></br>
